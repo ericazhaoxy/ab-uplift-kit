@@ -131,11 +131,11 @@ with tabs[0]:
         b = bal.reindex(bal.smd.abs().sort_values().index)
         fig = go.Figure(go.Bar(x=b.smd, y=b.feature, orientation="h", marker_color=BLUE,
                                hovertemplate="%{y}: SMD %{x:.4f}<extra></extra>"))
-        fig.add_vrect(x0=-chance, x1=chance, fillcolor=MUTED, opacity=0.25, line_width=0,
-                      annotation_text="chance range", annotation_position="top left")
+        fig.add_vrect(x0=-chance, x1=chance, fillcolor=MUTED, opacity=0.25, line_width=0)
         fig.update_xaxes(title="Standardised mean difference (treatment − control)")
         c1, c2 = st.columns([3, 2])
         c1.plotly_chart(style(fig, 360), width="stretch")
+        c1.caption("Gray band = 95% range of differences expected under pure randomisation.")
         n_bad = int((bal.z.abs() > 3.5).sum())
         if n_bad:
             c2.warning(f"⚠️ {n_bad} of {len(bal)} covariates differ between arms far beyond chance "

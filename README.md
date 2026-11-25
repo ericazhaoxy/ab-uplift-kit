@@ -1,7 +1,7 @@
 # Experiment Analyzer — trustworthy A/B testing & uplift modeling on 14M users
 
 [![tests](https://github.com/ericazhaoxy/ab-uplift-kit/actions/workflows/tests.yml/badge.svg)](https://github.com/ericazhaoxy/ab-uplift-kit/actions)
-[![Live demo](https://img.shields.io/badge/demo-Streamlit-2a78d6)](https://YOUR-APP.streamlit.app)
+[![Live demo](https://img.shields.io/badge/demo-Streamlit-2a78d6)](https://ab-uplift-kit.streamlit.app)
 
 An end-to-end experimentation toolkit (`abkit`) plus an interactive dashboard, applied to the
 **Criteo Uplift v2.1** dataset: 13,979,592 users from a real randomized advertising incrementality test.
@@ -95,7 +95,7 @@ incremental visits come from users who were already likely to engage.
 
 ## Dashboard
 
-`streamlit run streamlit_app.py` — or open the [live demo](https://YOUR-APP.streamlit.app).
+`streamlit run streamlit_app.py` — or open the [live demo](https://ab-uplift-kit.streamlit.app).
 It runs on a 300k-user sample of Criteo, or on **any CSV you upload** (treatment column, outcomes, covariates):
 
 1. **Health check**: SRM with a "simulate a logging bug" slider, plus the covariate balance chart
