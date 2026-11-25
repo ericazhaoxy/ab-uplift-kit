@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+# full dataset is ~300MB: download it, don't commit it
+data/*.csv.gz
+data/criteo_uplift.parquet
+results/results_synthetic.json
+data/nuisances_*.npz
+data/demo_sample.parquet.tmp
+results/figures_synthetic/
+results/*_synthetic.csv
+_to_delete/
